@@ -1,17 +1,18 @@
 # UpDrop Android — APKs oficiales
 
-Este repositorio público contiene **solo APKs firmadas**. El código fuente de UpDrop permanece privado.
+Repositorio público **solo para APKs firmadas**. El código fuente de UpDrop sigue privado.
 
-## Versión más reciente: 0.2.0
+## Versión más reciente: 0.2.1
 
-**[Descargar UpDrop Android 0.2.0](https://github.com/abstrates0000-byte/UpDrop-Android-Releases/releases/download/v0.2.0/UpDrop-Android.apk)**
+**[Descargar UpDrop Android 0.2.1](https://github.com/abstrates0000-byte/UpDrop-Android-Releases/releases/download/v0.2.1/UpDrop-Android.apk)**
 
-- Mismo paquete y certificado de firma que 0.1.0, para actualizar sin desinstalar.
-- Primer piloto de envío **Android → Windows** por red local, con QR para emparejar, TLS 1.3, código temporal, aceptación por archivo en Windows y SHA-256.
-- Un archivo por transferencia, máximo **256 MiB**. Sin recuperación ni envío Windows → Android por ahora.
-- SHA-256 de la APK oficial: `c553cd15435f8e4c410246e20f4983a9b86d1adf67e4db8d27f6a7557bb70c35`.
-- **El envío con teléfono físico y PC aún requiere validación**; no usar como sistema de copias de seguridad ni para datos importantes.
+- Corrección de compatibilidad de cadena de certificados TLS y diagnósticos detallados en la app.
+- Mismo paquete y certificado de firma Android que 0.1.0 y 0.2.0: **actualiza sin desinstalar**.
+- En Will27: **cierra el receptor anterior** con Ctrl+C, abre nuevamente **UpDrop - Recibir Android** y **escanea un QR nuevo** porque cambió la CA local (la CA anterior se conserva sin sobrescribirla).
+- Piloto de envío Android → Windows por LAN: TLS 1.3, huella verificada, autorización por archivo en la consola Windows, SHA-256. Límite 256 MiB, sin reanudación ni envío Windows → Android.
+- SHA-256 de la APK: `d68462bc52c9585a1f2b91cc1cc635f5ed5192ed6f41a0e11da487f884d15b36`.
+- **Todavía falta comprobar la transferencia en el Motorola real.** Si vuelve a aparecer `CertificateUnknown`, copia el error **detallado que muestra Android** (sin compartir el QR ni PAIR_TOKEN). No desactives TLS.
 
-[Versiones anteriores y notas](https://github.com/abstrates0000-byte/UpDrop-Android-Releases/releases).
+[Historial de versiones y notas](https://github.com/abstrates0000-byte/UpDrop-Android-Releases/releases).
 
-UpDrop consulta esta página de Releases cuando pulsas **Buscar actualización**. Descarga la APK, comprueba SHA-256 y certificado de firma y abre el instalador oficial de Android. Android requiere confirmación y no se instala nada en segundo plano. Nunca introducimos tokens personales de GitHub dentro de la app.
+Al pulsar **Buscar actualización**, UpDrop consulta GitHub Releases, compara versión, SHA-256, paquete y firma, y pide a Android la instalación con confirmación del usuario. No contiene tokens personales de GitHub.
