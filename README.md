@@ -1,14 +1,17 @@
-# UpDrop Android Releases
+# UpDrop Android — APKs oficiales
 
-Repositorio público **solo para APKs firmadas** de UpDrop Android. El código fuente permanece privado.
+Este repositorio público contiene **solo APKs firmadas**. El código fuente de UpDrop permanece privado.
 
-## Primera versión
+## Versión más reciente: 0.2.0
 
-[Descargar UpDrop Android v0.1.0](https://github.com/abstrates0000-byte/UpDrop-Android-Releases/releases/download/v0.1.0/UpDrop-Android.apk)
+**[Descargar UpDrop Android 0.2.0](https://github.com/abstrates0000-byte/UpDrop-Android-Releases/releases/download/v0.2.0/UpDrop-Android.apk)**
 
-- Versión `0.1.0`, paquete Android `com.abstrates.updrop`, firma APK v2/v3 verificada.
-- SHA-256: `34c7aa505460a0a917f0fdc1749e87935b2198bff3ce7617eefad6bfd64801ab`.
-- Incluye interfaz en español, selección de archivos y comprobación de actualizaciones en GitHub.
-- **Vista previa:** todavía no envía ni recibe archivos por Wi-Fi. No debe presentarse como producto terminado.
+- Mismo paquete y certificado de firma que 0.1.0, para actualizar sin desinstalar.
+- Primer piloto de envío **Android → Windows** por red local, con QR para emparejar, TLS 1.3, código temporal, aceptación por archivo en Windows y SHA-256.
+- Un archivo por transferencia, máximo **256 MiB**. Sin recuperación ni envío Windows → Android por ahora.
+- SHA-256 de la APK oficial: `c553cd15435f8e4c410246e20f4983a9b86d1adf67e4db8d27f6a7557bb70c35`.
+- **El envío con teléfono físico y PC aún requiere validación**; no usar como sistema de copias de seguridad ni para datos importantes.
 
-En próximas versiones publicaremos una sola APK denominada `UpDrop-Android.apk` por versión `vA.B.C`. La app contrasta la huella SHA-256 del asset en GitHub, el paquete y el certificado de firma con la versión instalada y luego abre el instalador oficial de Android con confirmación del usuario. La clave privada no se guarda en este repositorio.
+[Versiones anteriores y notas](https://github.com/abstrates0000-byte/UpDrop-Android-Releases/releases).
+
+UpDrop consulta esta página de Releases cuando pulsas **Buscar actualización**. Descarga la APK, comprueba SHA-256 y certificado de firma y abre el instalador oficial de Android. Android requiere confirmación y no se instala nada en segundo plano. Nunca introducimos tokens personales de GitHub dentro de la app.
